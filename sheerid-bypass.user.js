@@ -17,13 +17,13 @@
     window.fetch = function (input, init) {
         if (typeof input === 'string' && input.includes("orgsearch.sheerid.net/rest/organization/search")) {
             console.log("原始Fetch请求URL:", input);
-            input = input.replace("country=TW", "country=VN");
+            input = input.replace("country=AU", "country=VN");
             console.log("修改后的Fetch请求URL:", input);
         } else if (input instanceof Request) {
             const url = input.url;
             if (url.includes("orgsearch.sheerid.net/rest/organization/search")) {
                 console.log("Got fetch:", url);
-                const newUrl = url.replace("country=TW", "country=CN");
+                const newUrl = url.replace("country=AU", "country=VN");
                 console.log("Modified to:", newUrl);
 
                 // Clone
