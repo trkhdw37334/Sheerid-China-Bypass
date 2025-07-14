@@ -17,7 +17,7 @@
     window.fetch = function (input, init) {
         if (typeof input === 'string' && input.includes("orgsearch.sheerid.net/rest/organization/search")) {
             console.log("原始Fetch请求URL:", input);
-            input = input.replace("country=TW", "country=CN");
+            input = input.replace("country=TW", "country=VN");
             console.log("修改后的Fetch请求URL:", input);
         } else if (input instanceof Request) {
             const url = input.url;
